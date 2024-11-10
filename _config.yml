@@ -12,7 +12,7 @@ title                    : "Cecilia Sgalletta"
 title_separator          : "-"
 name                     : &name "Cecilia Sgalletta"
 description              : &description "personal description"
-url                      : https://academicpages.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
+url                      : https://ceciliasgalletta.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "ceciliasgalletta/ceciliasgalletta.github.io"
 
@@ -21,7 +21,7 @@ repository               : "ceciliasgalletta/ceciliasgalletta.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "profile.png"
+  avatar           : "profile.JPG"
   name             : "Cecilia Sgalletta"
   pronouns         : # example: "she/her"  
   bio              : "Ph.D. candidate in astrophysics"
@@ -76,6 +76,10 @@ author:
 
 # Publication Category - The following the list of publication categories and their headings
 publication_category:
+  main:
+    title: 'Main Author'
+  contributing:
+    title: 'Contributing Author'
   books:
     title: 'Books'
   manuscripts:
