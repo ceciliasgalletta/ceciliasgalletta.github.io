@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <title>Personal Webpage</title>
+    <link rel="stylesheet" href="css/styles.css">
+
+    <meta name="description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}">
+
+    <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet'>
+
+    <script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header class="header home-header">
+        <div class="overlay"></div>
+        
+        <!-- Navigation Bar -->
+        <nav class="navbar">
+            <div class="nav-left">
+                <a href="#home" class="nav-button"><b>Cecilia Sgalletta</b></a>
+            </div>
+            <div class="nav-right">
+                <a href="research.html" class="nav-button"><b>Research</b></a>
+                <a href="talks.html" class="nav-button"><b>Talks</b></a>
+                <a href="outreach.html" class="nav-button"><b>Outreach</b></a>
+                <a href="hobbies.html" class="nav-button"><b>Hobbies</b></a>
+            </div>
+        </nav>
+        
+        <!-- Title -->
+        <h1><b>Cecilia Sgalletta</b></h1>
+        <p class="subtitle">Theoretical and Computational Astrophysicist</p>
+    </header>
+
+    <!-- Main content -->
+    <main class="content">
+        <div class="profile-container">
+            <!-- Left Column -->
+            <div class="left-column">
+                <img src="assets/images/profile_square.JPG" alt="Cecilia Sgalletta" class="profile-photo">
+                <h3>Ph.D. candidate</h3>
+                <a class="institute">
+                    <img src="assets/icons/institute-icon.png" alt="Institute Icon" class="icon">SISSA, Trieste, Italy
+                </a>
+                <a href="mailto:cecilia.sgalletta@gmail.com" class="email">
+                    <img src="assets/icons/mail-icon.png" alt="MAIL Icon" class="icon">cecilia.sgalletta@gmail.com
+                </a>
+                <a href="https://orcid.org/0000-0001-5867-5033" class="orcid-link">
+                    <img src="assets/icons/orcid-icon.png" alt="ORCID Icon" class="icon"> ORCID
+                </a>
+                <a href="assets/docs/Curriculum_Vitae_Sgalletta_Cecilia.pdf" class="cv-button" target="_blank">
+                    <button class="btn">
+                        <img src="assets/icons/cv-icon.png" alt="CV Icon" class="icon">View My CV
+                    </button>
+                </a>
+            </div>
+            <!-- Right Column -->
+            <div class="right-column">
+                <h2>Welcome!</h2>
+                <p>I am a theoretical and computational astrophysicist, working in the field of binary compact objects, massive star evolution, and gravitational waves across cosmic time. I am currently a doctoral candidate at SISSA in Trieste, Italy, and expect to complete my PhD in Fall 2025.</p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>© 2024 Cecilia Sgalletta</p>
+    </footer>
+</body>
+</html>
