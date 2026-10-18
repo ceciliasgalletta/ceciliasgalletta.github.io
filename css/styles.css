@@ -1,0 +1,426 @@
+/* General Reset */
+body, h1, h2, p, a {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1, h2 {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700; /* Bold for emphasis */
+    margin-bottom: 10px;
+}
+
+p {
+    font-family: 'Open Sans', sans-serif; /* Ensures body text uses Open Sans */
+    text-align: left; /* Aligns the text to the left */
+    margin-bottom: 10px;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensures the body covers the full viewport height */
+    margin: 0;
+}
+
+/* Header (includes navigation bar and overlay) */
+/* .header {
+    position: relative;
+    height: 350px;
+    color: white;
+} */
+
+/* General Styling for Header */
+.header {
+    position: relative;
+    color:white;
+    height: 350px; /* Height of the header */
+    background-size: cover; /* Ensures the image covers the header */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Prevent image repetition */
+}
+
+/* Specific Backgrounds for Each Page's Header */
+.home-header {
+    background-image: url('../assets/images/home-bg.jpg');
+}
+
+.research-header {
+    background-image: url('../assets/images/home-bg.jpg');
+}
+
+.publications-header {
+    background-image: url('../assets/images/home-bg.jpg');
+}
+
+.talks-header {
+    background-image: url('../assets/images/home-bg.jpg');
+}
+
+.hobbies-header {
+    background-image: url('../assets/images/home-bg.jpg');
+}
+
+/* Overlay */
+.header .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(26, 26, 26, 0.5);
+    z-index: 1;
+}
+
+.header .subtitle {
+    position: relative;
+    text-align: center; /* Centers the subtitle text */
+    font-size: 1.3rem; /* Adjusts subtitle size */
+    font-weight: 300;  /* Makes the text lighter */
+    margin-top: 5px; /* Adds space between the title and subtitle */
+    color: #ffffff; /* Optional: Sets a softer color for the subtitle */
+    font-family: 'Open Sans', sans-serif; /* Matches the rest of the site */
+    z-index: 2;
+}
+
+/* Navigation Bar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 20px;
+    position: relative; /* Ensures stacking with overlay */
+    z-index: 2; /* Places it above the overlay */
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* Navbar Buttons */
+.navbar .nav-button {
+    color: white;
+    margin: 0 10px;
+    padding: 10px;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    text-decoration: none; /* Removes underline from links */
+    background: transparent; /* Transparent to match the background */
+    transition: background-color 0.3s;
+}
+
+.navbar .nav-button:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    cursor: pointer;
+}
+
+/* Title */
+.header h1 {
+    position: relative;
+    z-index: 2;
+    font-size: 3.5rem;
+    text-align: center;
+    margin-top: 80px;
+}
+
+
+
+/* Main Content */
+.content {
+    flex: 1;
+    padding: 20px;
+    max-width: 768px;
+    margin: 0 auto;
+    font-family: 'Open Sans', sans-serif;
+}
+
+
+.content p {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+
+/* Profile Container */
+.profile-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+/* Profile Photo */
+.profile-photo {
+    width: 200px; /* Set width for the profile photo */
+    /* height: 150px; Set height for the profile photo */
+    border-radius: 50%; /* Makes the image circular */
+    object-fit: cover; /* Ensures the image covers the circle */
+    border: 3px solid #fff; /* Optional, adds a border around the image */
+}
+
+/* Left Column */
+.left-column {
+    text-align: left;
+    flex: 1 1 200px; /* Grows/shrinks, sets minimum width */
+}
+
+.left-column h3 {
+    font-size: 1rem; /* Smaller font size for the h3 */
+    margin: 10px 0; /* Optional, adjusts spacing */
+}
+
+/* Right Column */
+.right-column {
+    flex: 2 1 300px; /* Grows/shrinks, sets minimum width */
+}
+
+/* Links and Text */
+.email, .orcid-link {
+    display: block;
+    margin: 5px 0;
+    color: #333;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.email:hover, .orcid-link:hover {
+    text-decoration: underline;
+}
+
+.publication-link {
+    display: block;
+    margin: 5px 0;
+    color: #0d9fdd;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.publication-link:hover {
+    text-decoration: underline;
+}
+
+/* Text Container */
+.text-container {
+    max-width: 600px; /* Limit the width of the text */
+}
+
+/* .main-text{
+    width: min(100vw, 768px);
+    margin: 0 auto;
+    padding: 20px; 
+    box-sizing: border-box;
+}
+
+.main-text h1, .main-text p {
+    word-wrap: break-word;
+    word-break: break-word; 
+} */
+
+/* Footer stays at the bottom */
+.footer {
+    background-color: #ffffff;
+    color: #333;
+    text-align: center;
+    padding: 10px 10px;
+    position: relative;
+    margin: 0 auto; 
+    font-size: 0.875rem;
+}
+
+
+/* Media Query for smaller screens */
+@media (max-width: 600px) {
+
+     /* Hide the profile photo on small screens */
+     .left-column {
+        display: none;
+    }
+
+    /* Allow the container to resize on smaller screens */
+    /* .main-text {
+        width: 100%;
+        padding: 10px;
+    } */
+
+    .nav-button{
+        font-size: 0.875rem;
+    }
+
+    /* Ensure text is properly responsive and doesn't overflow */
+    h1, p {
+        font-size: 1rem; /* Adjust font size for smaller screens */
+    }
+
+    .footer{
+        font-size: 0.875rem;
+    }
+}
+
+/* Icons */
+.icon {
+    width: 16px; /* Adjust icon size */
+    height: 16px;
+    margin-right: 5px; /* Space between the icon and text */
+    vertical-align: middle; /* Aligns the icon with the text */
+}
+
+
+/* Slideshow Container */
+.slideshow-container {
+    max-width: 768px; /* Match the fixed width */
+    margin: 0 auto; /* Center the slideshow horizontally */
+    position: relative;
+    overflow: visible;
+    background-color: #fff; /* Set the container's background to white */
+    border-radius: 10px; /* Optional: Add rounded corners for aesthetics */
+    padding: 30px; /* Optional: Add padding inside the container */
+}
+
+/* Slide Container */
+.slide-container {
+    width: 100%; /* Match the width of the slideshow container */
+    height: 500px; /* Fixed height for consistency */
+    display: flex; /* Center content both vertically and horizontally */
+    justify-content: center;
+    align-items: center;
+    background-color: #fff; /* White background for the container */
+}
+
+/* Slide Images */
+.slide img {
+    max-width: 100%; /* Scale down the image if larger than the container */
+    max-height: 100%; /* Ensure images don’t overflow the container height */
+    object-fit: contain; /* Ensure the whole image is visible, with possible empty space */
+}
+
+/* Navigation Buttons */
+.prev, .next {
+    position: absolute;
+    top: 50%; /* Align vertically in the middle */
+    transform: translateY(-50%); /* Center the button vertically */
+    width: 40px; /* Set width for round buttons */
+    height: 40px; /* Set height for round buttons */
+    border-radius: 50%; /* Makes the buttons round */
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+    color: white;
+    font-size: 1.2rem; /* Adjust font size for arrows */
+    border: none;
+    cursor: pointer;
+    z-index: 10; /* Ensure buttons are above all other elements */
+    display: flex; /* Use flexbox to center arrow icon inside button */
+    justify-content: center;
+    align-items: center;
+}
+
+/* Position Buttons on the Sides of the Container */
+.prev {
+    left: -20px; /* Position the left arrow outside the slideshow container */
+}
+
+.next {
+    right: -20px; /* Position the right arrow outside the slideshow container */
+}
+
+/* Button Hover Effect */
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8); /* Darker background on hover */
+}
+
+/* Animation for fading effect */
+.fade {
+    animation: fadeEffect 1.5s;
+}
+
+@keyframes fadeEffect {
+    from {
+        opacity: 0.4;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* General Styles */
+.title-section {
+    margin: 30px 0;
+}
+.research-section {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.research-section .text {
+    flex: 1;
+    padding: 0px;
+}
+
+.research-section .image {
+    flex: 1;
+    padding: 20px;
+}
+
+.research-section img {
+    width: 90%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Reverse the image and text order for alternating layout */
+.research-section.reverse {
+    flex-direction: row-reverse;
+}
+
+.research-section h2 {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.research-section p {
+    font-size: 0.9em;
+    color: #333;
+}
+
+.talk{
+    margin: 40px 0;
+}
+
+.talk h2 {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.talk p {
+    font-size: 0.9em;
+    color: #333;
+}
+
+.cv-button .btn {
+    background-color: white;
+    color: #333; /* Dark gray text */
+    border: 2px solid #ccc; /* Light gray border */
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 220px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.cv-button .btn:hover {
+    background-color: #f2f2f2; /* Light gray hover background */
+    color: #000; /* Darker text on hover */
+    border-color: #bbb; /* Slightly darker border */
+}
+
+.cv-button .btn .icon {
+    width: 16px; /* Adjust size of the icon */
+    height: 16px;
+}
